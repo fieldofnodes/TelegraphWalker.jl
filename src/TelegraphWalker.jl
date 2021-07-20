@@ -10,6 +10,10 @@ using Reexport
 @reexport using Telegraph
 
 export
+	MeanSquaredDisplacement,
+	DisplacementPositions,
+	TaxiCabDistance,
+	TaxiCabDistanceXY,
 	taxicabdistanceXY,
 	taxicabdistance,
 	periodicdomainshift,
