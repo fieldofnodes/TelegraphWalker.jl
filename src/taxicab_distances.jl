@@ -30,5 +30,18 @@ function taxicabdistanceXY(d::TaxiCabDistanceXY,domain)
 end
 
 
-d(w) = taxicabdistance(DisplacementPositions(w[1],w[end]),domain)
+walker_distance(w) = taxicabdistance(DisplacementPositions(w[1],w[end]),domain)
+
+
+
+function dₜ(w,domain)
+     d = DisplacementPositions(
+          Walker2D(w[1][1],w[1][2]), 
+          Walker2D(w[end][1],w[end][2])
+     )
+     D = taxicabdistanceXY(
+          taxicabdistanceXY(d),domain
+          )
+     return D
+end
 
